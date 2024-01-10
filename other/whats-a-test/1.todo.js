@@ -21,3 +21,14 @@ error if the subtract function were to have a bug
 // sum is intentionally broken so you can see errors in the tests
 const sum = (a, b) => a - b
 const subtract = (a, b) => a - b
+
+const result = sum(3, 5)
+const expected = 8
+
+if (result == expected) {
+  console.log('PASSED')
+} else {
+  throw new Error(
+    `The result of ${result} is not equal to the expected: ${expected}`,
+  )
+}
