@@ -6,8 +6,7 @@ test('isPasswordAllowed only allows some passwords', () => {
   expect(isPasswordAllowed('abec1231')).toBe(true)
 })
 
-// eslint-disable-next-line jest/prefer-todo
-test('userToJSON excludes secure properties', () => {
+describe('userToJSON excludes secure properties', () => {
   const user = {
     id: 'some-id',
     username: 'sarah',
@@ -21,9 +20,4 @@ test('userToJSON excludes secure properties', () => {
   const testUser = userToJSON(user)
   console.log(testUser)
   expect(testUser).toEqual({id: 'some-id', username: 'sarah'})
-})
-
-test('I submitted my elaboration and feedback', () => {
-  const submitted = true // change this when you've submitted!
-  expect(submitted).toBe(true)
 })
